@@ -4,15 +4,16 @@ stats.showPanel(0);
 document.body.appendChild(stats.dom);
 
 // initialize matrix-effect
-var matrixEffect = new MatrixEffect();
+var settings = new MatrixEffectSettings();
+var matrixEffect = new MatrixEffect(settings);
 
 // initialize dat.gui
 var gui = new dat.GUI();
-gui.add(matrixEffect.settings, 'speed');
-gui.add(matrixEffect.settings, 'minSize');
-gui.add(matrixEffect.settings, 'maxSize');
-gui.add(matrixEffect.settings, 'minRowHeight');
-gui.add(matrixEffect.settings, 'maxRowHeight');
+gui.add(settings, 'speed');
+gui.add(settings, 'minSize');
+gui.add(settings, 'maxSize');
+gui.add(settings, 'minRowHeight');
+gui.add(settings, 'maxRowHeight');
 
 // animation task
 function run() {
