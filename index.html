@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>MatrixEffectJS</title>
+    <meta name="author" content="Florian Raith">
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
@@ -14,23 +15,8 @@
     </div>
 
     <script src="./lib/stats.min.js" charset="utf-8"></script>
+    <script src="./lib/dat.gui.min.js" charset="utf-8"></script>
     <script src="./matrixeffect.js"></script>
-
-    <script>
-      var stats = new Stats();
-      stats.showPanel(0);
-      document.body.appendChild(stats.dom);
-
-      var matrixEffect = new MatrixEffect();
-
-      function run() {
-        stats.begin();
-        matrixEffect.render();
-        stats.end();
-        requestAnimationFrame(run);
-      }
-      requestAnimationFrame(run);
-
-    </script>
+    <script src="./script.js" charset="utf-8"></script>
   </body>
 </html>
